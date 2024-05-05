@@ -1,9 +1,8 @@
-import * as THREE from 'three'
+import * as THREE from "three";
 
 export default class Audio extends THREE.Audio {
-  constructor(buffer: AudioBuffer, listener: THREE.AudioListener) {
-    super(listener)
-    this.setBuffer(buffer)
-    return this
-  }
+	constructor(buffer: AudioBuffer, listener: THREE.AudioListener) {
+		super(listener);
+		this.setBuffer(buffer);
+	}
 }
