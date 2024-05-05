@@ -3,13 +3,15 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	root: ".",
+	root: "src",
 	plugins: [],
+	publicDir: "../public",
 	build: {
 		// docsフォルダに出力
 		outDir: resolve(__dirname, "dist"),
 		// 存在しないときはフォルダを作成する
 		emptyOutDir: true,
+		copyPublicDir: true,
 		rollupOptions: {
 			// entry pointがあるindex.htmlのパス
 			input: {
