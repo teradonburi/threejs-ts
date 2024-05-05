@@ -378,11 +378,11 @@ export default class PhysicsWorld {
 		}
 	};
 
-	getPointer = (body: unknown): string => (Ammo as any).getPointer(body);
+	getPointer = (body: unknown): number => (Ammo as any).getPointer(body);
 
 	// 物理空間上のオブジェクトの当たり判定
 	hitTest = (targets: THREE.Object3D[], needHitPoint = false) => {
-		const targetPtrs: { [key: string]: boolean } = {};
+		const targetPtrs: { [key: number]: boolean } = {};
 		for (const key in targets) {
 			const target = targets[key];
 			if (!target.userData.physicsBody) continue;
@@ -390,8 +390,8 @@ export default class PhysicsWorld {
 		}
 
 		const hits: {
-			a: string;
-			b: string;
+			a: number;
+			b: number;
 			pts?: { a: Ammo.btVector3; b: Ammo.btVector3 }[];
 		}[] = [];
 		const numManifolds = this.physicsWorld.getDispatcher().getNumManifolds();
