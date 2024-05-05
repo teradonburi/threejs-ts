@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
-      - run: npm run production
+        run: npm run production
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
