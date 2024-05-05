@@ -21,3 +21,5 @@ production build
 $ bun production
 $ bun preview
 ```
+
+demo: https://teradonburi.github.io/threejs-ts/
