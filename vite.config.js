@@ -6,8 +6,8 @@ export default defineConfig({
 	root: ".",
 	plugins: [],
 	build: {
-		// distフォルダに出力
-		outDir: resolve(__dirname, "dist"),
+		// docsフォルダに出力
+		outDir: resolve(__dirname, "docs"),
 		// 存在しないときはフォルダを作成する
 		emptyOutDir: true,
 		rollupOptions: {
@@ -17,7 +17,7 @@ export default defineConfig({
 			},
 			// bundle.jsを差し替えする
 			output: {
-				entryFileNames: 'dist/assets/bundle.js',
+				entryFileNames: 'assets/bundle.js',
 			},
 		},
 	},
