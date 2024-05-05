@@ -17,7 +17,7 @@ export default defineConfig({
 			},
 			// bundle.jsを差し替えする
 			output: {
-				entryFileNames: 'assets/bundle.js',
+				entryFileNames: 'dist/assets/bundle.js',
 			},
 		},
 	},
