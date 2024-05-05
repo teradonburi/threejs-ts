@@ -8,7 +8,7 @@ export default class DirectionalLight extends THREE.DirectionalLight {
 		shadowMapSize = 1024,
 	) {
 		// lighting
-		super(color, 1);
+		super(color, 0.5);
 		this.position.set(direction.x, direction.y, direction.z);
 		this.castShadow = true;
 		const sLight = dLight * 0.25;

@@ -18,6 +18,7 @@ import Fog from "./libs/Fog";
 import GLTFModel from "./libs/GLTFModel";
 import Grid from "./libs/Grid";
 import HeightMap from "./libs/HeightMap";
+import HemisphereLight from "./libs/HemisphereLight";
 import Keyboard from "./libs/Keyboard";
 import Loader from "./libs/Loader";
 import Particle from "./libs/Particle";
@@ -52,6 +53,7 @@ export default class Game {
 	bgm!: Audio;
 	sound!: PositionalAudio;
 	light!: DirectionalLight;
+	hemisphereLight!: HemisphereLight;
 	ambient!: AmbientLight;
 	sky!: Sky;
 	water!: Water;
@@ -146,8 +148,10 @@ export default class Game {
 		this.light.position.z =
 			parameters.distance * Math.sin(phi) * Math.cos(theta);
 		this.scene.add(this.light);
-		this.ambient = new AmbientLight();
+		this.ambient = new AmbientLight(0x404040);
 		this.scene.add(this.ambient);
+		this.hemisphereLight = new HemisphereLight();
+		this.scene.add(this.hemisphereLight);
 
 		// Sky
 		this.sky = new Sky();
@@ -206,7 +210,7 @@ export default class Game {
 		this.physicsWorld.addHumanBody(this.model.object, this.model.size, 0.5);
 		this.scene.add(this.model.object);
 		// this.model.add(this.sound)
-		// this.scene.add(this.model.boxHelper)
+		// this.scene.add(this.model.boxHelper);
 		this.isGround = false;
 
 		// Particle

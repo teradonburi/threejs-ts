@@ -3,7 +3,10 @@ import type { GLTF } from "three/addons/loaders/GLTFLoader.js";
 
 export default class GLTFModel {
 	object: THREE.Group<THREE.Object3DEventMap>;
-	boxHelper?: THREE.BoxHelper;
+	boxHelper: THREE.BoxHelper = new THREE.BoxHelper(
+		new THREE.Object3D(),
+		0xffff00,
+	);
 	size: THREE.Vector3 = new THREE.Vector3(0, 0, 0);
 	center: THREE.Vector3 = new THREE.Vector3(0, 0, 0);
 	mixer?: THREE.AnimationMixer;
