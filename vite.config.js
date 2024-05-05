@@ -8,7 +8,7 @@ export default defineConfig({
 	publicDir: "../public",
 	build: {
 		// docsフォルダに出力
-		outDir: resolve(__dirname, "dist"),
+		outDir: resolve(__dirname, "docs"),
 		// 存在しないときはフォルダを作成する
 		emptyOutDir: true,
 		copyPublicDir: true,
