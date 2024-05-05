@@ -4,8 +4,8 @@ export default class Particle extends THREE.Points {
 	constructor(
 		filename: string,
 		num = 1000,
-		hslColor = { h: 1.0, s: 0.2, l: 0.5 },
-		size = 20,
+		hslColor = { h: 0.4, s: 0.5, l: 0.5 },
+		size = 10,
 	) {
 		super();
 		this.geometry = this.createVertices(num);
