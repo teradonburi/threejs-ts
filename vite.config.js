@@ -7,7 +7,7 @@ export default defineConfig({
 	plugins: [],
 	build: {
 		// docsフォルダに出力
-		outDir: resolve(__dirname, "dist"),
+		outDir: resolve(__dirname, "docs"),
 		// 存在しないときはフォルダを作成する
 		emptyOutDir: true,
 		rollupOptions: {
