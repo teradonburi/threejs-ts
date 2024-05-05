@@ -18,4 +18,5 @@ production build
 
 ```
 $ bun production
+$ bun preview
 ```
