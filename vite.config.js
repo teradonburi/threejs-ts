@@ -7,13 +7,13 @@ export default defineConfig({
 	plugins: [],
 	build: {
 		// docsフォルダに出力
-		outDir: resolve(__dirname, "docs"),
+		outDir: resolve(__dirname, "dist"),
 		// 存在しないときはフォルダを作成する
 		emptyOutDir: true,
 		rollupOptions: {
 			// entry pointがあるindex.htmlのパス
 			input: {
-				"": resolve(__dirname, "index.html"),
+				"": resolve(__dirname, "src/index.html"),
 			},
 			// bundle.jsを差し替えする
 			output: {
